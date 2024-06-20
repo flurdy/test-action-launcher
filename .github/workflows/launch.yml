@@ -7,8 +7,6 @@ on:
 
 jobs:
   create-config:
-    uses: ${{ env.GITHUB_ORG }}/tests-action-launchee/.github/workflows/create-config-trigger.yml@main
+    uses: flurdy/tests-action-launchee/.github/workflows/create-config-trigger.yml@main
     with:
-      GITHUB_ORG: ${{ env.GITHUB_ORG }}
-      REPOSITORY_NAME: ${{ env.REPOSITORY_NAME }}
-      TEAM: ${{ env.TEAM }}
+      repositoryName: ${{ env.REPOSITORY_NAME }}
