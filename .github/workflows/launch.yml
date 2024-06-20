@@ -1,0 +1,14 @@
+name: Create Config in another repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-config:
+    uses: ${{ env.GITHUB_ORG }}/tests-action-launchee/.github/workflows/create-config-trigger.yml@main
+    with:
+      GITHUB_ORG: ${{ env.GITHUB_ORG }}
+      REPOSITORY_NAME: ${{ env.REPOSITORY_NAME }}
+      TEAM: ${{ env.TEAM }}
